@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flappy Brain — evolved neural network with live brain overlay</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --panel: #161b22;
+      --panel2: #1c2330;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #3ddc84;
+      --neg: #ff5d5d;
+      --border: #30363d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", system-ui, sans-serif;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+      background: var(--panel);
+    }
+
+    h1 {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .controls {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    button,
+    select {
+      background: var(--panel2);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 5px 10px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      border-color: var(--accent);
+    }
+
+    button.primary {
+      background: #1f6f43;
+      border-color: #238636;
+    }
+
+    #stats {
+      margin-left: auto;
+      font-size: 13px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    main {
+      display: flex;
+      gap: 16px;
+      padding: 16px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    #game-panel {
+      position: relative;
+    }
+
+    canvas#game {
+      background: #0f172a;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: block;
+    }
+
+    #brain-panel {
+      flex: 1;
+      min-width: 340px;
+      max-width: 560px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    #brain-panel h2 {
+      font-size: 14px;
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    #brain-svg-wrap {
+      width: 100%;
+    }
+
+    #brain-svg-wrap svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    #node-detail {
+      margin-top: 10px;
+      font-size: 12px;
+      background: var(--panel2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 10px;
+      min-height: 60px;
+      color: var(--muted);
+    }
+
+    #node-detail b {
+      color: var(--text);
+    }
+
+    canvas#chart {
+      width: 100%;
+      height: 120px;
+      margin-top: 12px;
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+    }
+
+    .legend {
+      display: flex;
+      gap: 14px;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .legend span::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 3px;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    .legend .l-best::before {
+      background: var(--accent);
+    }
+
+    .legend .l-avg::before {
+      background: #58a6ff;
+    }
+
+    .hint {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 6px 0 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Flappy Brain</h1>
+    <div class="controls">
+      <button id="btn-start" class="primary">Start evolution</button>
+      <button id="btn-reset">Reset</button>
+      <select id="speed" title="Simulation speed">
+        <option value="1">1x</option>
+        <option value="8">8x</option>
+        <option value="64" selected>64x</option>
+      </select>
+      <button id="btn-human">Play as human</button>
+      <button id="btn-save">Save champion</button>
+      <button id="btn-load">Load champion</button>
+    </div>
+    <div id="stats">—</div>
+  </header>
+  <main>
+    <div id="game-panel">
+      <canvas id="game" width="480" height="640"></canvas>
+    </div>
+    <div id="brain-panel">
+      <h2>Champion brain — live activations (click a neuron)</h2>
+      <div id="brain-svg-wrap"></div>
+      <div id="node-detail">Click a neuron to inspect its weights.</div>
+      <canvas id="chart" width="520" height="110"></canvas>
+      <div class="legend">
+        <span class="l-best">best fitness</span>
+        <span class="l-avg">avg fitness</span>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
