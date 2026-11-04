@@ -1,0 +1,281 @@
+training seed=9 pop=320 tracks/gen=20 ramp=100 gens | validation: 200 fixed tracks
+gen    0 d=0.30 best=  1698.4 mean=   108.8 fin=387/6400 crash=5172 prog=2.00 1.05s
+  val gen    0: success 111/200 laps 1.39 time 107.8s progress 1.39 -> champion saved
+gen    1 d=0.31 best=  1725.6 mean=   185.1 fin=694/6400 crash=4842 prog=2.00 1.16s
+gen    2 d=0.31 best=  1714.0 mean=   274.0 fin=1074/6400 crash=4483 prog=2.00 1.28s
+gen    3 d=0.32 best=  1711.6 mean=   381.4 fin=1481/6400 crash=4133 prog=2.00 1.43s
+gen    4 d=0.33 best=  1726.4 mean=   409.4 fin=1571/6400 crash=3891 prog=2.00 1.70s
+gen    5 d=0.34 best=  1707.6 mean=   393.9 fin=1568/6400 crash=4012 prog=2.00 1.71s
+gen    6 d=0.34 best=  1734.6 mean=   498.3 fin=1940/6400 crash=3552 prog=2.00 1.87s
+gen    7 d=0.35 best=  1698.8 mean=   453.2 fin=1883/6400 crash=3939 prog=2.00 1.92s
+gen    8 d=0.36 best=  1789.9 mean=   471.5 fin=1779/6400 crash=3706 prog=2.00 2.02s
+gen    9 d=0.36 best=  1734.7 mean=   408.3 fin=1652/6400 crash=3852 prog=2.00 1.71s
+gen   10 d=0.37 best=  1741.7 mean=   430.9 fin=1775/6400 crash=3892 prog=2.00 1.70s
+  val gen   10: success 197/200 laps 1.97 time 62.8s progress 1.97 -> champion saved
+gen   11 d=0.38 best=  1759.9 mean=   496.6 fin=1978/6400 crash=3539 prog=2.00 2.02s
+gen   12 d=0.38 best=  1727.6 mean=   487.4 fin=2050/6400 crash=3636 prog=2.00 1.67s
+gen   13 d=0.39 best=  1745.1 mean=   472.3 fin=2094/6400 crash=3721 prog=2.00 1.63s
+gen   14 d=0.40 best=  1738.0 mean=   483.0 fin=2108/6400 crash=3406 prog=2.00 1.97s
+gen   15 d=0.41 best=  1721.8 mean=   428.9 fin=1930/6400 crash=3775 prog=2.00 1.61s
+gen   16 d=0.41 best=  1731.6 mean=   484.8 fin=2055/6400 crash=3619 prog=2.00 1.72s
+gen   17 d=0.42 best=  1723.7 mean=   513.3 fin=2129/6400 crash=3469 prog=2.00 1.91s
+gen   18 d=0.43 best=  1707.3 mean=   500.6 fin=2062/6400 crash=3626 prog=2.00 1.72s
+gen   19 d=0.43 best=  1718.8 mean=   527.4 fin=2128/6400 crash=3405 prog=2.00 1.89s
+gen   20 d=0.44 best=  1721.8 mean=   578.5 fin=2386/6400 crash=3326 prog=2.00 1.78s
+  val gen   20: success 200/200 laps 2.00 time 48.9s progress 2.00 -> champion saved
+gen   21 d=0.45 best=  1723.6 mean=   602.7 fin=2495/6400 crash=3272 prog=2.00 1.79s
+gen   22 d=0.45 best=  1730.2 mean=   628.2 fin=2641/6400 crash=3063 prog=2.00 1.81s
+gen   23 d=0.46 best=  1756.3 mean=   668.4 fin=2667/6400 crash=3143 prog=2.00 1.86s
+gen   24 d=0.47 best=  1756.8 mean=   796.7 fin=3138/6400 crash=2846 prog=2.00 1.79s
+gen   25 d=0.48 best=  1712.4 mean=   808.3 fin=3263/6400 crash=2661 prog=2.00 1.85s
+gen   26 d=0.48 best=  1765.5 mean=  1040.5 fin=3937/6400 crash=1951 prog=2.00 2.45s
+gen   27 d=0.49 best=  1735.5 mean=  1104.1 fin=4378/6400 crash=1811 prog=2.00 2.08s
+gen   28 d=0.50 best=  1696.4 mean=  1070.1 fin=4401/6400 crash=1741 prog=2.00 2.10s
+gen   29 d=0.50 best=  1715.0 mean=  1250.2 fin=5135/6400 crash=1116 prog=2.00 2.31s
+gen   30 d=0.51 best=  1701.9 mean=  1192.9 fin=4928/6400 crash=1331 prog=2.00 2.04s
+  val gen   30: success 200/200 laps 2.00 time 48.9s progress 2.00 -> champion saved
+gen   31 d=0.52 best=  1716.1 mean=  1198.9 fin=5061/6400 crash=1040 prog=2.00 2.19s
+gen   32 d=0.52 best=  1745.1 mean=  1165.2 fin=4591/6400 crash=1556 prog=2.00 2.12s
+gen   33 d=0.53 best=  1748.4 mean=  1208.9 fin=4805/6400 crash=1377 prog=2.00 2.19s
+gen   34 d=0.54 best=  1745.4 mean=  1218.7 fin=4986/6400 crash=1200 prog=2.00 2.41s
+gen   35 d=0.55 best=  1713.0 mean=  1154.9 fin=4832/6400 crash=1451 prog=2.00 2.81s
+gen   36 d=0.55 best=  1740.7 mean=  1222.4 fin=5013/6400 crash=1219 prog=2.00 2.56s
+gen   37 d=0.56 best=  1740.7 mean=  1176.1 fin=4840/6400 crash=1435 prog=2.00 2.26s
+gen   38 d=0.57 best=  1752.2 mean=  1198.0 fin=4898/6400 crash=1374 prog=2.00 2.48s
+gen   39 d=0.57 best=  1752.7 mean=  1320.3 fin=5199/6400 crash=1064 prog=2.00 2.51s
+gen   40 d=0.58 best=  1753.4 mean=  1263.6 fin=5167/6400 crash=1085 prog=2.00 2.36s
+  val gen   40: success 200/200 laps 2.00 time 48.9s progress 2.00 
+gen   41 d=0.59 best=  1739.4 mean=  1297.2 fin=5196/6400 crash=1012 prog=2.00 2.39s
+gen   42 d=0.59 best=  1769.2 mean=  1354.3 fin=5353/6400 crash=877 prog=2.00 2.47s
+gen   43 d=0.60 best=  1786.7 mean=  1446.1 fin=5625/6400 crash=696 prog=2.00 2.36s
+gen   44 d=0.61 best=  1773.6 mean=  1400.2 fin=5456/6400 crash=847 prog=2.00 2.41s
+gen   45 d=0.62 best=  1730.4 mean=  1297.2 fin=5367/6400 crash=910 prog=2.00 2.31s
+gen   46 d=0.62 best=  1740.0 mean=  1373.3 fin=5521/6400 crash=694 prog=2.00 2.56s
+gen   47 d=0.63 best=  1778.3 mean=  1421.6 fin=5493/6400 crash=681 prog=2.00 2.50s
+gen   48 d=0.64 best=  1747.1 mean=  1399.9 fin=5504/6400 crash=749 prog=2.00 2.34s
+gen   49 d=0.64 best=  1760.2 mean=  1374.6 fin=5410/6400 crash=816 prog=2.00 2.70s
+gen   50 d=0.65 best=  1734.6 mean=  1376.7 fin=5434/6400 crash=771 prog=2.00 2.55s
+  val gen   50: success 200/200 laps 2.00 time 46.1s progress 2.00 -> champion saved
+gen   51 d=0.66 best=  1737.2 mean=  1402.7 fin=5613/6400 crash=597 prog=2.00 2.78s
+gen   52 d=0.66 best=  1719.7 mean=  1360.5 fin=5459/6400 crash=719 prog=2.00 2.75s
+gen   53 d=0.67 best=  1759.3 mean=  1389.8 fin=5413/6400 crash=743 prog=2.00 2.84s
+gen   54 d=0.68 best=  1757.2 mean=  1452.0 fin=5651/6400 crash=604 prog=2.00 2.65s
+gen   55 d=0.69 best=  1761.4 mean=  1455.1 fin=5597/6400 crash=594 prog=2.00 2.78s
+gen   56 d=0.69 best=  1765.2 mean=  1429.4 fin=5621/6400 crash=659 prog=2.00 2.55s
+gen   57 d=0.70 best=  1760.3 mean=  1412.3 fin=5489/6400 crash=624 prog=2.00 2.98s
+gen   58 d=0.71 best=  1755.1 mean=  1377.3 fin=5454/6400 crash=720 prog=2.00 2.76s
+gen   59 d=0.71 best=  1754.3 mean=  1369.0 fin=5361/6400 crash=809 prog=2.00 2.92s
+gen   60 d=0.72 best=  1737.8 mean=  1390.6 fin=5493/6400 crash=659 prog=2.00 3.22s
+  val gen   60: success 200/200 laps 2.00 time 45.4s progress 2.00 -> champion saved
+gen   61 d=0.73 best=  1769.3 mean=  1439.0 fin=5653/6400 crash=535 prog=2.00 3.16s
+gen   62 d=0.73 best=  1739.2 mean=  1408.0 fin=5616/6400 crash=566 prog=2.00 3.49s
+gen   63 d=0.74 best=  1736.8 mean=  1445.8 fin=5634/6400 crash=564 prog=2.00 3.26s
+gen   64 d=0.75 best=  1738.7 mean=  1360.8 fin=5496/6400 crash=712 prog=2.00 3.09s
+gen   65 d=0.75 best=  1759.3 mean=  1399.0 fin=5457/6400 crash=779 prog=2.00 2.33s
+gen   66 d=0.76 best=  1730.9 mean=  1381.7 fin=5578/6400 crash=588 prog=2.00 2.99s
+gen   67 d=0.77 best=  1737.0 mean=  1384.5 fin=5505/6400 crash=668 prog=2.00 2.67s
+gen   68 d=0.78 best=  1715.6 mean=  1369.0 fin=5431/6400 crash=693 prog=2.00 5.04s
+gen   69 d=0.78 best=  1722.3 mean=  1380.7 fin=5530/6400 crash=634 prog=2.00 4.70s
+gen   70 d=0.79 best=  1709.1 mean=  1381.1 fin=5693/6400 crash=549 prog=2.00 4.61s
+  val gen   70: success 200/200 laps 2.00 time 45.6s progress 2.00 
+gen   71 d=0.80 best=  1740.8 mean=  1423.7 fin=5524/6400 crash=622 prog=2.00 4.80s
+gen   72 d=0.80 best=  1768.8 mean=  1478.0 fin=5756/6400 crash=551 prog=2.00 4.13s
+gen   73 d=0.81 best=  1714.1 mean=  1346.5 fin=5275/6400 crash=874 prog=2.00 4.15s
+gen   74 d=0.82 best=  1724.2 mean=  1384.8 fin=5435/6400 crash=764 prog=2.00 4.44s
+gen   75 d=0.82 best=  1743.7 mean=  1331.8 fin=5285/6400 crash=846 prog=2.00 4.35s
+gen   76 d=0.83 best=  1741.0 mean=  1373.1 fin=5330/6400 crash=817 prog=2.00 4.34s
+gen   77 d=0.84 best=  1735.4 mean=  1331.1 fin=5234/6400 crash=861 prog=2.00 4.78s
+gen   78 d=0.85 best=  1760.6 mean=  1347.7 fin=5262/6400 crash=844 prog=2.00 4.50s
+gen   79 d=0.85 best=  1721.2 mean=  1285.8 fin=5159/6400 crash=931 prog=2.00 4.26s
+gen   80 d=0.86 best=  1763.2 mean=  1378.9 fin=5341/6400 crash=759 prog=2.00 4.68s
+  val gen   80: success 200/200 laps 2.00 time 44.8s progress 2.00 -> champion saved
+gen   81 d=0.87 best=  1723.2 mean=  1331.0 fin=5319/6400 crash=844 prog=2.00 4.98s
+gen   82 d=0.87 best=  1738.7 mean=  1328.3 fin=5327/6400 crash=891 prog=2.00 4.34s
+gen   83 d=0.88 best=  1716.5 mean=  1337.9 fin=5314/6400 crash=863 prog=2.00 4.70s
+gen   84 d=0.89 best=  1773.1 mean=  1387.5 fin=5430/6400 crash=681 prog=2.00 3.62s
+gen   85 d=0.90 best=  1740.4 mean=  1331.3 fin=5257/6400 crash=819 prog=2.00 2.66s
+gen   86 d=0.90 best=  1744.5 mean=  1434.7 fin=5602/6400 crash=561 prog=2.00 2.59s
+gen   87 d=0.91 best=  1748.1 mean=  1494.0 fin=5734/6400 crash=508 prog=2.00 2.74s
+gen   88 d=0.92 best=  1709.3 mean=  1520.2 fin=5909/6400 crash=388 prog=2.00 4.52s
+gen   89 d=0.92 best=  1769.9 mean=  1519.7 fin=5829/6400 crash=373 prog=2.00 4.53s
+gen   90 d=0.93 best=  1727.7 mean=  1494.7 fin=5780/6400 crash=342 prog=2.00 4.71s
+  val gen   90: success 200/200 laps 2.00 time 44.8s progress 2.00 
+gen   91 d=0.94 best=  1757.0 mean=  1549.3 fin=5900/6400 crash=396 prog=2.00 3.23s
+gen   92 d=0.94 best=  1752.6 mean=  1545.1 fin=5837/6400 crash=404 prog=2.00 3.34s
+gen   93 d=0.95 best=  1729.4 mean=  1518.3 fin=5818/6400 crash=435 prog=2.00 4.24s
+gen   94 d=0.96 best=  1734.1 mean=  1507.2 fin=5716/6400 crash=450 prog=2.00 4.35s
+gen   95 d=0.97 best=  1730.0 mean=  1511.9 fin=5762/6400 crash=471 prog=2.00 2.68s
+gen   96 d=0.97 best=  1774.5 mean=  1511.4 fin=5684/6400 crash=511 prog=2.00 2.55s
+gen   97 d=0.98 best=  1769.5 mean=  1518.5 fin=5692/6400 crash=524 prog=2.00 3.00s
+gen   98 d=0.99 best=  1798.3 mean=  1537.1 fin=5666/6400 crash=555 prog=2.00 3.39s
+gen   99 d=0.99 best=  1740.5 mean=  1445.1 fin=5648/6400 crash=535 prog=2.00 2.81s
+gen  100 d=1.00 best=  1785.1 mean=  1526.9 fin=5740/6400 crash=506 prog=2.00 2.75s
+  val gen  100: success 200/200 laps 2.00 time 44.8s progress 2.00 -> champion saved
+gen  101 d=1.00 best=  1795.4 mean=  1556.9 fin=5794/6400 crash=481 prog=2.00 2.77s
+gen  102 d=1.00 best=  1802.8 mean=  1525.1 fin=5627/6400 crash=513 prog=2.00 2.91s
+gen  103 d=1.00 best=  1723.3 mean=  1530.4 fin=5922/6400 crash=329 prog=2.00 2.80s
+gen  104 d=1.00 best=  1781.5 mean=  1523.5 fin=5717/6400 crash=477 prog=2.00 2.87s
+gen  105 d=1.00 best=  1758.0 mean=  1541.5 fin=5778/6400 crash=375 prog=2.00 3.38s
+gen  106 d=1.00 best=  1725.6 mean=  1512.8 fin=5788/6400 crash=348 prog=2.00 6.56s
+gen  107 d=1.00 best=  1738.7 mean=  1493.1 fin=5764/6400 crash=370 prog=2.00 5.83s
+gen  108 d=1.00 best=  1772.9 mean=  1493.2 fin=5678/6400 crash=540 prog=2.00 5.94s
+gen  109 d=1.00 best=  1742.6 mean=  1481.4 fin=5640/6400 crash=502 prog=2.00 5.83s
+gen  110 d=1.00 best=  1779.6 mean=  1511.8 fin=5700/6400 crash=468 prog=2.00 3.41s
+  val gen  110: success 200/200 laps 2.00 time 45.5s progress 2.00 
+gen  111 d=1.00 best=  1745.8 mean=  1511.0 fin=5843/6400 crash=402 prog=2.00 3.20s
+gen  112 d=1.00 best=  1779.5 mean=  1558.5 fin=5822/6400 crash=350 prog=2.00 3.23s
+gen  113 d=1.00 best=  1742.5 mean=  1509.6 fin=5733/6400 crash=432 prog=2.00 2.75s
+gen  114 d=1.00 best=  1746.8 mean=  1545.7 fin=5823/6400 crash=398 prog=2.00 2.62s
+gen  115 d=1.00 best=  1733.4 mean=  1500.8 fin=5814/6400 crash=396 prog=2.00 3.97s
+gen  116 d=1.00 best=  1742.4 mean=  1475.6 fin=5713/6400 crash=426 prog=2.00 5.47s
+gen  117 d=1.00 best=  1781.5 mean=  1540.6 fin=5708/6400 crash=450 prog=2.00 3.25s
+gen  118 d=1.00 best=  1757.4 mean=  1507.3 fin=5735/6400 crash=477 prog=2.00 2.50s
+gen  119 d=1.00 best=  1773.4 mean=  1558.6 fin=5900/6400 crash=328 prog=2.00 2.42s
+gen  120 d=1.00 best=  1749.5 mean=  1484.3 fin=5735/6400 crash=448 prog=2.00 2.51s
+  val gen  120: success 200/200 laps 2.00 time 45.3s progress 2.00 
+gen  121 d=1.00 best=  1782.2 mean=  1532.2 fin=5796/6400 crash=424 prog=2.00 2.79s
+gen  122 d=1.00 best=  1726.6 mean=  1453.4 fin=5913/6400 crash=372 prog=2.00 2.49s
+gen  123 d=1.00 best=  1751.8 mean=  1523.0 fin=5717/6400 crash=431 prog=2.00 2.70s
+gen  124 d=1.00 best=  1756.9 mean=  1436.5 fin=5466/6400 crash=684 prog=2.00 2.54s
+gen  125 d=1.00 best=  1772.0 mean=  1513.3 fin=5731/6400 crash=469 prog=2.00 2.78s
+gen  126 d=1.00 best=  1747.6 mean=  1473.0 fin=5618/6400 crash=506 prog=2.00 3.32s
+gen  127 d=1.00 best=  1731.2 mean=  1451.4 fin=5553/6400 crash=464 prog=2.00 3.50s
+gen  128 d=1.00 best=  1748.8 mean=  1566.3 fin=5892/6400 crash=364 prog=2.00 4.25s
+gen  129 d=1.00 best=  1723.1 mean=  1485.9 fin=5725/6400 crash=440 prog=2.00 3.25s
+gen  130 d=1.00 best=  1756.8 mean=  1563.1 fin=5874/6400 crash=395 prog=2.00 2.56s
+  val gen  130: success 200/200 laps 2.00 time 44.9s progress 2.00 
+gen  131 d=1.00 best=  1759.4 mean=  1568.1 fin=5883/6400 crash=348 prog=2.00 2.53s
+gen  132 d=1.00 best=  1739.9 mean=  1547.7 fin=5856/6400 crash=427 prog=2.00 2.74s
+gen  133 d=1.00 best=  1772.8 mean=  1568.3 fin=5785/6400 crash=455 prog=2.00 2.95s
+gen  134 d=1.00 best=  1753.2 mean=  1516.1 fin=5706/6400 crash=551 prog=2.00 3.13s
+gen  135 d=1.00 best=  1794.3 mean=  1522.6 fin=5628/6400 crash=553 prog=2.00 3.42s
+gen  136 d=1.00 best=  1740.5 mean=  1530.1 fin=5780/6400 crash=416 prog=2.00 2.93s
+gen  137 d=1.00 best=  1734.3 mean=  1548.2 fin=5891/6400 crash=387 prog=2.00 2.58s
+gen  138 d=1.00 best=  1720.8 mean=  1554.7 fin=5940/6400 crash=372 prog=2.00 2.41s
+gen  139 d=1.00 best=  1753.4 mean=  1575.6 fin=5904/6400 crash=396 prog=2.00 2.37s
+gen  140 d=1.00 best=  1765.2 mean=  1538.4 fin=5788/6400 crash=462 prog=2.00 2.09s
+  val gen  140: success 200/200 laps 2.00 time 44.7s progress 2.00 -> champion saved
+gen  141 d=1.00 best=  1759.5 mean=  1563.1 fin=5908/6400 crash=370 prog=2.00 2.17s
+gen  142 d=1.00 best=  1755.4 mean=  1551.4 fin=5820/6400 crash=441 prog=2.00 2.26s
+gen  143 d=1.00 best=  1733.3 mean=  1551.9 fin=5944/6400 crash=366 prog=2.00 2.07s
+gen  144 d=1.00 best=  1734.3 mean=  1513.5 fin=5809/6400 crash=460 prog=2.00 2.17s
+gen  145 d=1.00 best=  1760.1 mean=  1537.6 fin=5769/6400 crash=417 prog=2.00 3.01s
+gen  146 d=1.00 best=  1744.3 mean=  1549.4 fin=5830/6400 crash=407 prog=2.00 2.49s
+gen  147 d=1.00 best=  1735.0 mean=  1494.9 fin=5724/6400 crash=471 prog=2.00 3.13s
+gen  148 d=1.00 best=  1766.2 mean=  1566.6 fin=5831/6400 crash=459 prog=2.00 2.32s
+gen  149 d=1.00 best=  1725.4 mean=  1466.8 fin=5653/6400 crash=559 prog=2.00 2.29s
+gen  150 d=1.00 best=  1762.5 mean=  1547.7 fin=5807/6400 crash=457 prog=2.00 2.41s
+  val gen  150: success 200/200 laps 2.00 time 44.3s progress 2.00 -> champion saved
+gen  151 d=1.00 best=  1729.1 mean=  1537.7 fin=5848/6400 crash=350 prog=2.00 2.42s
+gen  152 d=1.00 best=  1709.1 mean=  1479.0 fin=5770/6400 crash=486 prog=2.00 2.06s
+gen  153 d=1.00 best=  1734.6 mean=  1514.2 fin=5830/6400 crash=458 prog=2.00 2.07s
+gen  154 d=1.00 best=  1767.4 mean=  1539.3 fin=5876/6400 crash=386 prog=2.00 2.15s
+gen  155 d=1.00 best=  1815.3 mean=  1636.2 fin=5930/6400 crash=345 prog=2.00 2.36s
+gen  156 d=1.00 best=  1753.9 mean=  1556.1 fin=5893/6400 crash=428 prog=2.00 2.18s
+gen  157 d=1.00 best=  1755.7 mean=  1580.7 fin=5902/6400 crash=352 prog=2.00 2.75s
+gen  158 d=1.00 best=  1762.4 mean=  1621.4 fin=6039/6400 crash=268 prog=2.00 2.76s
+gen  159 d=1.00 best=  1750.2 mean=  1592.9 fin=6001/6400 crash=305 prog=2.00 2.83s
+gen  160 d=1.00 best=  1775.4 mean=  1642.6 fin=6088/6400 crash=272 prog=2.00 2.91s
+  val gen  160: success 200/200 laps 2.00 time 43.4s progress 2.00 -> champion saved
+gen  161 d=1.00 best=  1758.6 mean=  1605.8 fin=5996/6400 crash=274 prog=2.00 2.78s
+gen  162 d=1.00 best=  1776.1 mean=  1648.1 fin=6066/6400 crash=252 prog=2.00 2.74s
+gen  163 d=1.00 best=  1747.1 mean=  1608.5 fin=6050/6400 crash=225 prog=2.00 2.66s
+gen  164 d=1.00 best=  1737.3 mean=  1588.6 fin=6075/6400 crash=247 prog=2.00 2.60s
+gen  165 d=1.00 best=  1723.8 mean=  1594.8 fin=6100/6400 crash=198 prog=2.00 2.76s
+gen  166 d=1.00 best=  1790.6 mean=  1650.1 fin=6111/6400 crash=196 prog=2.00 2.67s
+gen  167 d=1.00 best=  1784.3 mean=  1648.9 fin=6088/6400 crash=252 prog=2.00 2.61s
+gen  168 d=1.00 best=  1758.5 mean=  1602.3 fin=6061/6400 crash=267 prog=2.00 2.69s
+gen  169 d=1.00 best=  1733.6 mean=  1574.5 fin=6008/6400 crash=280 prog=2.00 2.78s
+gen  170 d=1.00 best=  1796.4 mean=  1626.6 fin=6014/6400 crash=295 prog=2.00 2.75s
+  val gen  170: success 200/200 laps 2.00 time 43.4s progress 2.00 
+gen  171 d=1.00 best=  1766.3 mean=  1587.6 fin=6014/6400 crash=325 prog=2.00 2.77s
+gen  172 d=1.00 best=  1794.7 mean=  1595.2 fin=5900/6400 crash=356 prog=2.00 2.71s
+gen  173 d=1.00 best=  1788.8 mean=  1593.9 fin=5939/6400 crash=358 prog=2.00 2.43s
+gen  174 d=1.00 best=  1743.7 mean=  1545.4 fin=5865/6400 crash=370 prog=2.00 2.18s
+gen  175 d=1.00 best=  1768.5 mean=  1555.7 fin=5871/6400 crash=435 prog=2.00 2.02s
+gen  176 d=1.00 best=  1703.4 mean=  1529.7 fin=5889/6400 crash=343 prog=2.00 2.21s
+gen  177 d=1.00 best=  1773.2 mean=  1592.3 fin=5930/6400 crash=311 prog=2.00 2.21s
+gen  178 d=1.00 best=  1801.0 mean=  1603.9 fin=5955/6400 crash=369 prog=2.00 2.09s
+gen  179 d=1.00 best=  1735.9 mean=  1535.8 fin=5911/6400 crash=327 prog=2.00 2.20s
+gen  180 d=1.00 best=  1766.2 mean=  1597.7 fin=6036/6400 crash=291 prog=2.00 2.03s
+  val gen  180: success 200/200 laps 2.00 time 43.3s progress 2.00 -> champion saved
+gen  181 d=1.00 best=  1763.2 mean=  1560.6 fin=5883/6400 crash=347 prog=2.00 2.38s
+gen  182 d=1.00 best=  1761.1 mean=  1598.7 fin=6004/6400 crash=317 prog=2.00 2.94s
+gen  183 d=1.00 best=  1721.1 mean=  1510.0 fin=5833/6400 crash=403 prog=2.00 2.59s
+gen  184 d=1.00 best=  1751.6 mean=  1580.5 fin=5964/6400 crash=242 prog=2.00 2.83s
+gen  185 d=1.00 best=  1780.2 mean=  1542.8 fin=5755/6400 crash=433 prog=2.00 2.67s
+gen  186 d=1.00 best=  1738.1 mean=  1593.7 fin=6022/6400 crash=294 prog=2.00 2.60s
+gen  187 d=1.00 best=  1795.4 mean=  1649.1 fin=5990/6400 crash=320 prog=2.00 2.16s
+gen  188 d=1.00 best=  1764.2 mean=  1569.5 fin=5950/6400 crash=389 prog=2.00 2.11s
+gen  189 d=1.00 best=  1751.7 mean=  1600.4 fin=5998/6400 crash=317 prog=2.00 2.27s
+gen  190 d=1.00 best=  1732.3 mean=  1590.1 fin=6034/6400 crash=293 prog=2.00 2.10s
+  val gen  190: success 200/200 laps 2.00 time 43.8s progress 2.00 
+gen  191 d=1.00 best=  1794.4 mean=  1607.8 fin=5932/6400 crash=403 prog=2.00 2.51s
+gen  192 d=1.00 best=  1770.5 mean=  1633.4 fin=6027/6400 crash=287 prog=2.00 2.10s
+gen  193 d=1.00 best=  1784.1 mean=  1664.8 fin=6076/6400 crash=269 prog=2.00 2.14s
+gen  194 d=1.00 best=  1778.2 mean=  1657.2 fin=6093/6400 crash=264 prog=2.00 2.09s
+gen  195 d=1.00 best=  1768.8 mean=  1672.4 fin=6112/6400 crash=249 prog=2.00 2.07s
+gen  196 d=1.00 best=  1725.3 mean=  1632.0 fin=6124/6400 crash=202 prog=2.00 2.06s
+gen  197 d=1.00 best=  1756.0 mean=  1659.2 fin=6109/6400 crash=262 prog=2.00 2.08s
+gen  198 d=1.00 best=  1757.5 mean=  1672.7 fin=6147/6400 crash=235 prog=2.00 1.94s
+gen  199 d=1.00 best=  1792.5 mean=  1711.1 fin=6155/6400 crash=195 prog=2.00 2.35s
+gen  200 d=1.00 best=  1767.7 mean=  1681.1 fin=6179/6400 crash=204 prog=2.00 2.27s
+  val gen  200: success 200/200 laps 2.00 time 43.4s progress 2.00 
+gen  201 d=1.00 best=  1791.1 mean=  1714.8 fin=6194/6400 crash=186 prog=2.00 2.40s
+gen  202 d=1.00 best=  1741.9 mean=  1635.4 fin=6108/6400 crash=252 prog=2.00 2.32s
+gen  203 d=1.00 best=  1752.3 mean=  1657.1 fin=6139/6400 crash=245 prog=2.00 2.58s
+gen  204 d=1.00 best=  1788.5 mean=  1693.4 fin=6170/6400 crash=189 prog=2.00 2.44s
+gen  205 d=1.00 best=  1803.8 mean=  1709.8 fin=6143/6400 crash=246 prog=2.00 2.66s
+gen  206 d=1.00 best=  1798.0 mean=  1681.9 fin=6116/6400 crash=260 prog=2.00 2.41s
+gen  207 d=1.00 best=  1765.0 mean=  1661.0 fin=6112/6400 crash=276 prog=2.00 2.35s
+gen  208 d=1.00 best=  1699.8 mean=  1609.0 fin=6150/6400 crash=248 prog=2.00 2.62s
+gen  209 d=1.00 best=  1736.4 mean=  1645.1 fin=6164/6400 crash=221 prog=2.00 2.26s
+gen  210 d=1.00 best=  1739.4 mean=  1644.1 fin=6144/6400 crash=213 prog=2.00 2.40s
+  val gen  210: success 200/200 laps 2.00 time 43.8s progress 2.00 
+gen  211 d=1.00 best=  1763.3 mean=  1659.5 fin=6131/6400 crash=163 prog=2.00 2.65s
+gen  212 d=1.00 best=  1768.9 mean=  1663.3 fin=6164/6400 crash=218 prog=2.00 2.57s
+gen  213 d=1.00 best=  1749.1 mean=  1661.7 fin=6146/6400 crash=250 prog=2.00 2.57s
+gen  214 d=1.00 best=  1754.1 mean=  1651.4 fin=6144/6400 crash=234 prog=2.00 2.53s
+gen  215 d=1.00 best=  1740.5 mean=  1637.3 fin=6112/6400 crash=249 prog=2.00 2.22s
+gen  216 d=1.00 best=  1744.5 mean=  1641.4 fin=6124/6400 crash=222 prog=2.00 2.58s
+gen  217 d=1.00 best=  1756.8 mean=  1661.1 fin=6129/6400 crash=250 prog=2.00 2.39s
+gen  218 d=1.00 best=  1799.5 mean=  1710.6 fin=6143/6400 crash=229 prog=2.00 2.19s
+gen  219 d=1.00 best=  1767.7 mean=  1671.6 fin=6136/6400 crash=218 prog=2.00 2.31s
+gen  220 d=1.00 best=  1746.0 mean=  1657.2 fin=6163/6400 crash=223 prog=2.00 2.13s
+  val gen  220: success 200/200 laps 2.00 time 43.9s progress 2.00 
+gen  221 d=1.00 best=  1759.3 mean=  1663.8 fin=6145/6400 crash=229 prog=2.00 2.51s
+gen  222 d=1.00 best=  1791.3 mean=  1707.4 fin=6172/6400 crash=199 prog=2.00 2.61s
+gen  223 d=1.00 best=  1745.4 mean=  1648.2 fin=6111/6400 crash=268 prog=2.00 2.24s
+gen  224 d=1.00 best=  1771.2 mean=  1679.5 fin=6150/6400 crash=226 prog=2.00 2.31s
+gen  225 d=1.00 best=  1765.9 mean=  1667.0 fin=6120/6400 crash=227 prog=2.00 2.40s
+gen  226 d=1.00 best=  1736.9 mean=  1657.9 fin=6165/6400 crash=224 prog=2.00 2.32s
+gen  227 d=1.00 best=  1781.1 mean=  1693.0 fin=6169/6400 crash=206 prog=2.00 2.34s
+gen  228 d=1.00 best=  1769.6 mean=  1683.3 fin=6150/6400 crash=236 prog=2.00 2.66s
+gen  229 d=1.00 best=  1774.7 mean=  1694.8 fin=6181/6400 crash=214 prog=2.00 2.52s
+gen  230 d=1.00 best=  1754.0 mean=  1668.5 fin=6151/6400 crash=219 prog=2.00 2.44s
+  val gen  230: success 200/200 laps 2.00 time 44.2s progress 2.00 
+gen  231 d=1.00 best=  1780.6 mean=  1672.7 fin=6132/6400 crash=256 prog=2.00 2.50s
+gen  232 d=1.00 best=  1750.7 mean=  1680.1 fin=6204/6400 crash=175 prog=2.00 2.30s
+gen  233 d=1.00 best=  1775.3 mean=  1676.7 fin=6180/6400 crash=184 prog=2.00 2.25s
+gen  234 d=1.00 best=  1746.9 mean=  1655.0 fin=6171/6400 crash=212 prog=2.00 2.56s
+gen  235 d=1.00 best=  1750.3 mean=  1668.5 fin=6146/6400 crash=197 prog=2.00 2.08s
+gen  236 d=1.00 best=  1768.8 mean=  1682.8 fin=6148/6400 crash=204 prog=2.00 2.21s
+gen  237 d=1.00 best=  1726.3 mean=  1644.9 fin=6156/6400 crash=208 prog=2.00 1.99s
+gen  238 d=1.00 best=  1770.9 mean=  1681.1 fin=6162/6400 crash=185 prog=2.00 2.15s
+gen  239 d=1.00 best=  1727.5 mean=  1643.9 fin=6146/6400 crash=215 prog=2.00 2.06s
+gen  240 d=1.00 best=  1780.1 mean=  1683.8 fin=6121/6400 crash=272 prog=2.00 2.16s
+  val gen  240: success 200/200 laps 2.00 time 44.1s progress 2.00 
+gen  241 d=1.00 best=  1762.2 mean=  1680.9 fin=6163/6400 crash=215 prog=2.00 2.01s
+gen  242 d=1.00 best=  1785.1 mean=  1692.9 fin=6144/6400 crash=225 prog=2.00 2.04s
+gen  243 d=1.00 best=  1772.0 mean=  1697.8 fin=6180/6400 crash=200 prog=2.00 1.98s
+gen  244 d=1.00 best=  1749.5 mean=  1672.4 fin=6158/6400 crash=221 prog=2.00 1.98s
+gen  245 d=1.00 best=  1780.6 mean=  1694.3 fin=6169/6400 crash=222 prog=2.00 2.07s
+gen  246 d=1.00 best=  1774.6 mean=  1698.5 fin=6176/6400 crash=220 prog=2.00 2.08s
+gen  247 d=1.00 best=  1777.1 mean=  1701.3 fin=6171/6400 crash=206 prog=2.00 2.21s
+gen  248 d=1.00 best=  1767.9 mean=  1685.7 fin=6160/6400 crash=217 prog=2.00 2.08s
+gen  249 d=1.00 best=  1743.5 mean=  1665.5 fin=6175/6400 crash=201 prog=2.00 1.99s
+  val gen  249: success 200/200 laps 2.00 time 44.7s progress 2.00 
+total 690.9s
+
+finished 250 generations in 690.9s
+champion: models/final_candidate.json | validation success 200/200 | mean laps 2.00 | mean time 44.7s
