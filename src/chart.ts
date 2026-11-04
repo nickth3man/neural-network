@@ -39,10 +39,6 @@ export function drawChart(
     ctx.lineTo(w, y);
     ctx.stroke();
   }
-  ctx.fillStyle = "#8b949e";
-  ctx.font = "10px system-ui";
-  ctx.fillText(`max ${Math.round(max)}`, 4, 10);
-
   const x = (i: number) => (i / (best.length - 1)) * (w - 8) + 4;
   const y = (v: number) => h - 4 - (v / max) * (h - 14);
 
@@ -60,4 +56,10 @@ export function drawChart(
   };
   polyline(best, BEST_COLOR);
   polyline(avg, AVG_COLOR);
+
+  // Keep the scale label readable even when the best series touches the top.
+  ctx.clearRect(0, 0, 88, 14);
+  ctx.fillStyle = "#8b949e";
+  ctx.font = "10px system-ui";
+  ctx.fillText(`max ${Math.round(max)}`, 4, 10);
 }

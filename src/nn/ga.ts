@@ -55,6 +55,8 @@ export class Population {
   /** champion = fittest genome of the most recent completed generation */
   champion: Network | null = null;
   championFitness = 0;
+  /** Index of the champion within genomes at the last evaluate(); -1 before any evaluation. */
+  championIndex = -1;
   generation = 0;
   historyBest: number[] = [];
   historyAvg: number[] = [];
@@ -90,6 +92,7 @@ export class Population {
       if (this.fitness[i] > this.fitness[bestIdx]) bestIdx = i;
     }
     this.champion = this.genomes[bestIdx].clone();
+    this.championIndex = bestIdx;
     this.championFitness = this.fitness[bestIdx];
     this.historyBest.push(this.fitness[bestIdx]);
     this.historyAvg.push(sum / n);

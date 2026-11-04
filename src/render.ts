@@ -16,6 +16,19 @@ export interface BirdPose {
   dead: boolean;
 }
 
+/**
+ * Birds the canvas should draw. During a champion replay the population is
+ * reset and idle, so only the replay bird is shown; otherwise every
+ * population bird is shown at its simulation position.
+ */
+export function poseBirds(
+  envs: readonly { y: number; dead: boolean }[],
+  replay: { y: number; dead: boolean } | null,
+): BirdPose[] {
+  if (replay) return [{ y: replay.y, dead: replay.dead }];
+  return envs.map((env) => ({ y: env.y, dead: env.dead }));
+}
+
 export function drawFrame(
   ctx: CanvasRenderingContext2D,
   env: FlappyEnv,

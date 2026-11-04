@@ -44,6 +44,19 @@ describe("FlappyEnv physics", () => {
     expect(env.dead).toBe(true);
   });
 
+  it("dies when the bird's circle crosses the ceiling", () => {
+    const env = new FlappyEnv(fixedSchedule());
+    env.reset();
+    env.y = BIRD_R - 1;
+    env.step(false);
+    expect(env.dead).toBe(true);
+
+    env.reset();
+    env.y = BIRD_R + 1;
+    env.step(false);
+    expect(env.dead).toBe(false);
+  });
+
   it("steps are no-ops after death", () => {
     const env = new FlappyEnv(fixedSchedule());
     env.reset();

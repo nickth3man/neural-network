@@ -95,8 +95,8 @@ export class FlappyEnv {
    }
   }
 
-  // Ceiling and floor are lethal.
-  if (this.y < -BIRD_R || this.y > GAME_H - BIRD_R) {
+  // Ceiling and floor are lethal for the whole bird, not just its center.
+  if (this.y < BIRD_R || this.y > GAME_H - BIRD_R) {
    this.dead = true;
    return;
   }
@@ -163,9 +163,9 @@ export function hitPipe(bx: number, by: number, r: number, p: Pipe): boolean {
  return hitsTop || hitsBottom;
 }
 
-function circleRect(cx: number, cy: number, r: number, rx: number, ry: number, rw: number, rh: number): boolean {
- const nx = clamp(cx, rx, rw);
- const ny = clamp(cy, ry, rh);
+function circleRect(cx: number, cy: number, r: number, minX: number, minY: number, maxX: number, maxY: number): boolean {
+ const nx = clamp(cx, minX, maxX);
+ const ny = clamp(cy, minY, maxY);
  const dx = cx - nx;
  const dy = cy - ny;
  return dx * dx + dy * dy <= r * r;

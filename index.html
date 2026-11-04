@@ -50,6 +50,21 @@
       flex-wrap: wrap;
     }
 
+    .controls label {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    #brain-svg-wrap circle:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    #brain-svg-wrap circle:focus {
+      stroke: #fde047;
+      stroke-width: 3;
+    }
+
     button,
     select {
       background: var(--panel2);
@@ -176,6 +191,25 @@
       color: var(--muted);
       margin: 6px 0 0;
     }
+
+    #action-status {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+      min-height: 16px;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
   </style>
 </head>
 
@@ -185,6 +219,7 @@
     <div class="controls">
       <button id="btn-start" class="primary">Start evolution</button>
       <button id="btn-reset">Reset</button>
+      <label for="speed">Speed</label>
       <select id="speed" title="Simulation speed">
         <option value="1">1x</option>
         <option value="8">8x</option>
@@ -195,15 +230,23 @@
       <button id="btn-load">Load champion</button>
     </div>
     <div id="stats">—</div>
+    <div id="action-status" role="status" aria-live="polite"></div>
   </header>
   <main>
     <div id="game-panel">
-      <canvas id="game" width="480" height="640"></canvas>
+      <canvas
+        id="game"
+        width="480"
+        height="640"
+        role="img"
+        aria-label="Flappy Bird game view: evolved birds, pipes, and the tracked champion"
+      >Flappy Bird simulation canvas. Enable canvas support to see the game.</canvas>
     </div>
     <div id="brain-panel">
-      <h2>Champion brain — live activations (click a neuron)</h2>
+      <h2>Tracked network — live activations (click or focus a neuron)</h2>
       <div id="brain-svg-wrap"></div>
       <div id="node-detail">Click a neuron to inspect its weights.</div>
+      <div id="node-announce" class="visually-hidden" role="status" aria-live="polite"></div>
       <canvas id="chart" width="520" height="110"></canvas>
       <div class="legend">
         <span class="l-best">best fitness</span>

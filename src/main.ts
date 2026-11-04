@@ -6,10 +6,12 @@ import { drawChart } from "./chart";
 import { Evolver, SENSOR_COUNT } from "./evolve";
 import { FlappyEnv, GAME_H, makeSchedule } from "./game/flappy";
 import { mulberry32 } from "./nn/ga";
-import { Network, type NetworkSizes } from "./nn/network";
-import { drawFrame, type BirdPose } from "./render";
+import type { NetworkSizes } from "./nn/network";
+import { deserializeChampion, serializeChampion } from "./persistence";
+import { drawFrame, poseBirds } from "./render";
 
 const SIZES: NetworkSizes = { input: SENSOR_COUNT, hidden: 4, output: 1 };
+const CHAMPION_KEY = "flappy-brain-champion";
 
 const canvas = document.getElementById("game") as HTMLCanvasElement;
 const ctx = canvas.getContext("2d")!;
@@ -21,6 +23,8 @@ const btnSave = document.getElementById("btn-save") as HTMLButtonElement;
 const btnLoad = document.getElementById("btn-load") as HTMLButtonElement;
 const speedSelect = document.getElementById("speed") as HTMLSelectElement;
 const detailEl = document.getElementById("node-detail") as HTMLElement;
+const announceEl = document.getElementById("node-announce") as HTMLElement;
+const actionEl = document.getElementById("action-status") as HTMLElement;
 const chartCanvas = document.getElementById("chart") as HTMLCanvasElement;
 
 const brainView = new BrainView(
@@ -28,7 +32,7 @@ const brainView = new BrainView(
   detailEl,
   SIZES,
   (sel: NodeSelection) => {
-    brainView.renderDetail(sel, lastInputs, lastLayers, lastWeights);
+    announceEl.textContent = brainView.renderDetail(sel, lastInputs, lastLayers, lastWeights);
   },
 );
 
@@ -76,12 +80,10 @@ function updateTrackedBuffers(): void {
 }
 
 function render(): void {
-  const trackedIdx = evolver.trackedIndex();
-  const birds: BirdPose[] = [];
-  for (let i = 0; i < evolver.envs.length; i++) {
-    birds.push({ y: evolver.envs[i].y, dead: evolver.envs[i].dead });
-  }
-  const env = evolver.replayTicks > 0 ? evolver.replayEnv : evolver.envs[0] ?? evolver.replayEnv;
+  const replaying = evolver.replayTicks > 0;
+  const birds = humanMode ? [] : poseBirds(evolver.envs, replaying ? evolver.replayEnv : null);
+  const trackedIdx = humanMode ? -1 : replaying ? 0 : evolver.trackedIndex();
+  const env = humanMode ? humanEnv : evolver.sceneEnv();
   drawFrame(ctx, env, birds, trackedIdx, humanMode ? humanEnv.y : null, humanMode && humanDead);
 
   updateTrackedBuffers();
@@ -159,20 +161,28 @@ btnHuman.addEventListener("click", () => {
 });
 
 btnSave.addEventListener("click", () => {
-  if (!evolver.pop.champion) return;
-  localStorage.setItem(
-    "flappy-brain-champion",
-    JSON.stringify({ gen: evolver.pop.generation, ...evolver.pop.champion.toJSON() }),
-  );
-  statsEl.textContent = `saved champion (gen ${evolver.pop.generation})`;
+  const champion = evolver.pop.champion;
+  if (!champion) {
+    actionEl.textContent = "save failed: no champion yet";
+    return;
+  }
+  localStorage.setItem(CHAMPION_KEY, serializeChampion(champion, evolver.pop.generation));
+  actionEl.textContent = `saved champion (gen ${evolver.pop.generation})`;
 });
 
 btnLoad.addEventListener("click", () => {
-  const raw = localStorage.getItem("flappy-brain-champion");
-  if (!raw) return;
-  const saved = JSON.parse(raw) as { gen: number; sizes: NetworkSizes; weights: number[] };
-  evolver.pop.genomes[0] = Network.fromJSON(saved);
-  statsEl.textContent = `loaded champion from gen ${saved.gen}`;
+  const raw = localStorage.getItem(CHAMPION_KEY);
+  if (!raw) {
+    actionEl.textContent = "load failed: no saved champion";
+    return;
+  }
+  const loaded = deserializeChampion(raw, SIZES);
+  if (!loaded.ok) {
+    actionEl.textContent = `load failed: ${loaded.error}`;
+    return;
+  }
+  evolver.loadChampion(loaded.network);
+  actionEl.textContent = `loaded champion from gen ${loaded.gen}`;
 });
 
 speedSelect.addEventListener("change", () => {
