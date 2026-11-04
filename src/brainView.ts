@@ -57,6 +57,11 @@ export class BrainView {
     this.onSelect = onSelect;
     this.svg = document.createElementNS(SVG_NS, "svg");
     this.svg.setAttribute("viewBox", `0 0 ${VIEW_W} ${VIEW_H}`);
+    this.svg.setAttribute("role", "group");
+    this.svg.setAttribute(
+      "aria-label",
+      "Neural network graph. Tab to a neuron and press Enter to inspect it.",
+    );
     container.appendChild(this.svg);
     this.buildLayout();
     this.svg.addEventListener("click", (ev) => {
@@ -73,7 +78,7 @@ export class BrainView {
 
   private buildLayout(): void {
     const { input, hidden, output } = this.sizes;
-    const mkNode = (layer: string, idx: number, x: number, y: number, label: string | null): NodeSpec => {
+    const mkNode = (layer: NodeSelection["layer"], idx: number, x: number, y: number, label: string | null): NodeSpec => {
       const circle = document.createElementNS(SVG_NS, "circle");
       circle.setAttribute("cx", String(x));
       circle.setAttribute("cy", String(y));
@@ -83,9 +88,21 @@ export class BrainView {
       circle.setAttribute("stroke-width", "1.5");
       circle.setAttribute("data-layer", layer);
       circle.setAttribute("data-idx", String(idx));
+      circle.setAttribute("tabindex", "0");
+      circle.setAttribute("role", "button");
+      circle.setAttribute(
+        "aria-label",
+        label ?? (layer === "hidden" ? `Hidden neuron ${idx}` : `Output neuron ${idx}`),
+      );
       circle.style.cursor = "pointer";
+      circle.addEventListener("keydown", (ev) => {
+        if (ev.key !== "Enter" && ev.key !== " ") return;
+        ev.preventDefault();
+        ev.stopPropagation();
+        this.selectNode(layer, idx);
+      });
       const labelEl = label
-        ? this.makeText(x - 74, y + 4, label, "end", "#8b949e")
+        ? this.makeText(x - NODE_R - 6, y + 4, label, "end", "#8b949e")
         : null;
       const valueEl = this.makeText(x + NODE_R + 6, y + 4, "", "start", "#e6edf3");
       this.svg.appendChild(circle);
@@ -181,17 +198,22 @@ export class BrainView {
     this.selected = { layer, idx };
     for (const n of [...this.inputNodes, ...this.hiddenNodes, ...this.outputNodes]) {
       n.circle.setAttribute("stroke", "#30363d");
+      n.circle.removeAttribute("aria-current");
     }
     const map: Record<string, NodeSpec[]> = { input: this.inputNodes, hidden: this.hiddenNodes, output: this.outputNodes };
-    map[layer][idx]?.circle.setAttribute("stroke", "#fde047");
+    const chosen = map[layer][idx];
+    if (chosen) {
+      chosen.circle.setAttribute("stroke", "#fde047");
+      chosen.circle.setAttribute("aria-current", "true");
+    }
     this.onSelect(this.selected);
   }
 
   /** Render the detail panel for the selected node (or clear with null). */
-  renderDetail(sel: NodeSelection | null, inputs: Float32Array | null, layers: Float32Array[] | null, weights: Float32Array | null): void {
+  renderDetail(sel: NodeSelection | null, inputs: Float32Array | null, layers: Float32Array[] | null, weights: Float32Array | null): string {
     if (!sel) {
       this.detailEl.textContent = "Click a neuron to inspect its weights.";
-      return;
+      return "";
     }
     const { input, hidden, output } = this.sizes;
     const parts: string[] = [];
@@ -235,5 +257,12 @@ export class BrainView {
       parts.push("Hidden inputs: " + ins.map(([name, w]) => `${name} ${w.toFixed(2)}`).join(", "));
     }
     this.detailEl.innerHTML = parts.join("<br/>");
+    return parts
+      .join(". ")
+      .replace(/<[^>]+>/g, "")
+      .replace(/&nbsp;/g, " ")
+      .replace(/&gt;/g, ">")
+      .replace(/\s+/g, " ")
+      .trim();
   }
 }

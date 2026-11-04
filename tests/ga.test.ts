@@ -55,6 +55,8 @@ describe("Population.evaluate", () => {
     pop.evaluate((net) => net.weights[0]);
     const maxW = Math.max(...pop.fitness);
     expect(pop.championFitness).toBe(maxW);
+    expect(pop.championIndex).toBeGreaterThanOrEqual(0);
+    expect(pop.fitness[pop.championIndex]).toBe(maxW);
     expect(pop.champion!.weights[0]).toBe(maxW);
     expect(pop.historyBest[pop.historyBest.length - 1]).toBe(maxW);
     expect(pop.historyAvg.length).toBe(1);
