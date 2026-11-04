@@ -1,0 +1,20 @@
+[package]
+name = "racer"
+version = "0.1.0"
+edition = "2024"
+default-run = "racer"
+description = "Neuroevolution racing game: an evolved neural network learns to drive randomized tracks"
+
+[dependencies]
+macroquad = "0.4.16"
+rayon = "1.12"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+
+[profile.dev]
+opt-level = 1
